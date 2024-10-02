@@ -5,9 +5,73 @@
     --cinza_secundario: #C0C0C0;
     --botao_azul: #167BF7;
     --cor_de_fundo: #00030C;
+    /*Criando uma variavel para a minha fonte*/
+    --fonte_principal: 'Roboto';
 }
 
 body{
     background-color: var(--cor_de_fundo);
+    color: var(--branco_principal);
+    font-family: var(--fonte_principal);
+    font-size: 16px;
+    font-weight: 400;
 }
 /*O "var", funciona como uma funcao CSS, aplicando a sua logica interna*/
+
+/*Chamando a minha classe do HTML*/
+
+.principal{
+    background-image: url(img/Background.png); /*adicionando uma imagem de fundo*/
+    background-repeat: no-repeat; /*para não repetir o backgroud*/
+    background-size: contain;
+    align-items: center; /*Alinhando no centro da seção*/
+    text-align: center; /*Alinha todos os elementos de um bloco*/
+}
+
+.container{
+    height: 100vh; /*"vh" vai detectar a altura do dispositivo e vai preencher automaticamente*/
+    display: grid;
+    grid-template-columns: 50% 50%; /*Com esse comando ele dividi a minha tela em quando espaços eu precisa posso tbm dividir em 4 usando (25% 25% 25% 25%)*/
+}
+
+.container__botao{
+    background-color: var(--botao_azul); /*chamado a minha variavel para aplicar a cor*/
+    border-radius: 5px; /*arredondando as bordas*/
+    padding: 1em; /*bordar interna*/
+    color: var(--branco_principal);
+    display: block;/*para ele ocupar todo o bloco*/ 
+    text-decoration: none; /*tirando a decoracao do texto*/
+    margin-bottom: 1em; /*posso colocar esse espaçamento do margin com left ou qualquer posição*/
+}
+
+.botao_secundario{
+    background-color: transparent; /*deixando a cor de fundo transparente*/
+    border: 2px solid var(--branco_principal); /*adicionando uma bordar*/
+}
+ 
+.container__aviso{
+    font-size: 12px;
+    color: var(--cinza_secundario);
+}
+
+.container__titulo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem{
+    margin: 1em 0 2em  0; /*funciona como um relogio: primeiro valor: topo ^ | Segundo valor: lateral direita > | terceito valor: baixo v | quarto valor: lateral esquerda < */ 
+}
+
+.container__caixa{ /*Essa classe asicionamos dentro da nossa div geral, então tudo nela vai aplicar nos demais elementos*/
+    margin: 0 6em; /*margin é exatamente uma margem, como se fosse fazer uma margem que delimita o que vai ser utilizado*/
+}
+
+.secundario__imagem{
+    width: 70%;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 10em;
+}
