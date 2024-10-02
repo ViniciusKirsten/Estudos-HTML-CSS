@@ -75,3 +75,23 @@ body{
     align-items: center;
     margin: 0 10em;
 }
+
+.descricao__titulo{
+    font-weight: 700; /*texto em bold*/
+    font-size: 48px;
+    color: var(--branco_principal);
+    margin-bottom: 0em;
+}
+
+.descricao__texto{
+    color: var(--cinza_secundario);
+}
+
+.secundario__botao{
+    display: inline-block; /*bloqueia o botão para ficar no tamanho do que está escrito*/
+    margin-top: 1em;
+}
+
+.container__descricao{
+    padding: 2em;
+}
